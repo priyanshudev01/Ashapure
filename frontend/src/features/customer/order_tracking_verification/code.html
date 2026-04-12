@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aasapure | Order Tracking &amp; Purity Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#8a143c",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-variant": "#e0e3e5",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary-container": "#c74668",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "on-surface-variant": "#3e4a3d",
+                    "outline-variant": "#bdcaba",
+                    "error-container": "#ffdad6",
+                    "surface": "#f7f9fb",
+                    "on-secondary-fixed": "#131b2e",
+                    "secondary": "#565e74",
+                    "primary-fixed": "#7ffc97",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#f7fff2",
+                    "primary": "#006b2c",
+                    "surface-bright": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "outline": "#6e7b6c",
+                    "surface-tint": "#006e2d",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-container": "#dae2fd",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-fixed": "#ffd9de",
+                    "on-primary-fixed-variant": "#005320",
+                    "on-tertiary-fixed": "#3f0016",
+                    "primary-container": "#00873a",
+                    "background": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#62df7d",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-fixed": "#dae2fd",
+                    "on-background": "#191c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#002109",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#ffb2bf",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#a72d51",
+                    "on-surface": "#191c1e",
+                    "inverse-primary": "#62df7d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .purity-gradient {
+            background: linear-gradient(135deg, #006b2c 0%, #00873a 100%);
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm font-['Inter'] antialiased docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-6 py-3">
+<div class="text-2xl font-black tracking-tight text-green-600 dark:text-green-500">Aasapure</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg" href="#">Shop</a>
+<a class="text-green-700 dark:text-green-400 font-semibold px-3 py-1 rounded-lg" href="#">Orders</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 md:px-8 py-8 md:flex gap-8">
+<aside class="hidden md:flex flex-col h-[calc(100vh-100px)] w-64 bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm tracking-wide py-8 px-4 border-r border-slate-200 dark:border-slate-800 sticky top-20 rounded-xl">
+<div class="mb-8 px-2">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Welcome back</p>
+<p class="text-green-600 font-bold text-lg">Pristine Flow Member</p>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">shopping_basket</span> Shop
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span> Subscriptions
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-bold border-r-4 border-green-600 rounded-lg" href="#">
+<span class="material-symbols-outlined">history</span> Order History
+                </a>
+</div>
+<button class="mt-auto bg-primary text-on-primary py-3 rounded-xl font-bold active:scale-95 duration-150">Switch Role</button>
+</aside>
+<section class="flex-grow space-y-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-1">Order #AP-88291</h1>
+<p class="text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary scale-75">verified</span>
+                        Purity Guaranteed • Dispatching from South Farm
+                    </p>
+</div>
+<div class="bg-primary-container/20 text-primary px-4 py-2 rounded-full font-bold flex items-center gap-2 border border-primary/20">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+                    Live Tracking
+                </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm relative group h-[450px]">
+<div class="absolute inset-0 bg-slate-200">
+<img class="w-full h-full object-cover grayscale-[20%] opacity-90" data-alt="a minimalist detailed map of a suburban residential neighborhood with a small green icon representing a delivery vehicle moving along a street" data-location="Mumbai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJOgG_hiJoqkm2C8qpkn8kz-Fnkt16xj_BtgGc-9Z5y96_sV0ANLBQz7BO7_qmTiVkak8JaBmCxaObrEdj6yJraEZ9_y6CNncLO9YSn1J0O8HTCOztSsjdOZ4NFUVbTdfGBBBq-MlQuucUn51iTHf13EpRYunta34aQ6Of57Q6PlGdX1Q-YIeHCztiFpbHw9juFun9TnNEecf44z7hIkQQvWmsySAxNUnzGWxy_F9kWRx6Y0gGQlyO0c39u18qTYyPS_sK98UUJ28"/>
+</div>
+<div class="absolute top-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl flex items-center justify-between border border-white/50 shadow-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="portrait of a friendly smiling middle-aged delivery professional in a neat green polo shirt with high-key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67BXbfEV9an5KwLgvNBwLSb8xNs9I2OfVN5jVO6Z9RDZWAwSdVFMNB886NdUqw3Q3A1oqWArpYA0aJyrWlxDfgwX-DlNjTOCf9lZ1CV-s0dBfQ5IjpO2j90r3nLy8th-NC8M1iRMAl_gyYg_CWB1lXI0kl3oVWe-WJMRFBOMbvuyCPuKNQSn6ktObaYT7HoqEiibCSk6BUgoDSbhV2tonqWHI9uvxZHC-6byHiSfVpiquzf0HZ9j1SbzY3N6lBOIkLyPKOH77PqU"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Rohan K.</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-yellow-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        4.9 • Electric Scooter
+                                    </p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary border border-surface-container hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">call</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary border border-surface-container hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md">
+<div class="bg-inverse-surface text-inverse-on-surface p-4 rounded-xl shadow-2xl flex items-center gap-4">
+<div class="bg-primary p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-primary">local_shipping</span>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-semibold">Arriving in 4 mins</p>
+<div class="w-full bg-white/20 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-fixed h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="font-bold text-lg mb-8 px-2">Delivery Progress</h3>
+<div class="relative flex justify-between items-start">
+<div class="absolute top-5 left-0 right-0 h-0.5 bg-outline-variant/30 -z-0"></div>
+<div class="flex flex-col items-center gap-3 relative z-10 w-1/5">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Placed</p>
+</div>
+<div class="flex flex-col items-center gap-3 relative z-10 w-1/5">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Packed</p>
+</div>
+<div class="flex flex-col items-center gap-3 relative z-10 w-1/5">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Transit</p>
+</div>
+<div class="flex flex-col items-center gap-3 relative z-10 w-1/5">
+<div class="w-12 h-12 -mt-1 rounded-full purity-gradient text-on-primary flex items-center justify-center shadow-xl ring-4 ring-white">
+<span class="material-symbols-outlined animate-pulse">biotech</span>
+</div>
+<p class="text-[10px] font-black uppercase tracking-widest text-primary text-center">Purity Check</p>
+</div>
+<div class="flex flex-col items-center gap-3 relative z-10 w-1/5 opacity-40">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">home</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Delivered</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="purity-gradient p-6 rounded-2xl text-on-primary shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 scale-150">
+<span class="material-symbols-outlined text-[120px]">verified_user</span>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-black mb-2 leading-tight">Digital Purity Certificate</h3>
+<p class="text-sm opacity-90 mb-6">Batch ID: #MLK-882-901</p>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center bg-white/10 p-3 rounded-xl backdrop-blur-sm border border-white/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">water_drop</span>
+<span class="text-sm font-medium">pH Level</span>
+</div>
+<span class="font-bold text-lg">6.7 pH</span>
+</div>
+<div class="flex justify-between items-center bg-white/10 p-3 rounded-xl backdrop-blur-sm border border-white/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">opacity</span>
+<span class="text-sm font-medium">Fat Content</span>
+</div>
+<span class="font-bold text-lg">4.2%</span>
+</div>
+<div class="flex justify-between items-center bg-white/10 p-3 rounded-xl backdrop-blur-sm border border-white/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">thermostat</span>
+<span class="text-sm font-medium">Temp.</span>
+</div>
+<span class="font-bold text-lg">4.2°C</span>
+</div>
+</div>
+<button class="w-full bg-primary-fixed text-on-primary-fixed py-4 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg hover:brightness-110 active:scale-95 transition-all">
+                                Verify Milk Now
+                            </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-on-surface">Order Summary</h4>
+<span class="text-xs font-bold text-primary bg-primary-fixed/30 px-2 py-1 rounded">2 ITEMS</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="a glass bottle of fresh whole milk on a clean white surface with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgXAdHtu20wNuaCEaJtJ3N0t-N1YdKN5DEZA6EIEMlqdQ_RYiXU-F1Xm4P4ubPy512iL1menEAPW82m63jseBEUUCJT3-tmzeGhDBjf2xYPUp7snG5mEcr7ot8PwgFJbcIxWKkkWaV99WNql8loJKO9uCH1um-KisuKV63qnFmz9txSmXGAgVG2wWefvF-2vURn488zZHAWbJIM8ao3qMZtBiRZsTl2pRei2rDHwid2CWL-YhvllOjMRMA16sKMjt5hdhk7eKGncg"/>
+</div>
+<div class="flex-grow">
+<p class="text-sm font-bold">A2 Desi Cow Milk</p>
+<p class="text-xs text-on-surface-variant">1 Litre x 2</p>
+</div>
+<p class="font-bold text-sm">₹158.00</p>
+</div>
+<div class="pt-4 border-t border-dashed border-outline-variant flex justify-between items-center">
+<p class="font-bold">Total Paid</p>
+<p class="text-xl font-black text-primary">₹158.00</p>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container/30 p-6 rounded-2xl border border-secondary-container/50">
+<div class="flex gap-4">
+<div class="text-secondary">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<div>
+<p class="font-bold text-on-secondary-container text-sm">Need help with your order?</p>
+<p class="text-xs text-on-secondary-container/80 mt-1">Our support team is available 24/7 for our Pristine Flow members.</p>
+<button class="mt-3 text-sm font-bold text-secondary hover:underline">Chat with us</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="md:hidden fixed bottom-0 left-0 right-0 glass-header border-t border-surface-container-high px-6 py-3 z-50 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="text-[10px] font-bold">Shop</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="text-[10px] font-bold">Orders</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</div>
+</body></html>

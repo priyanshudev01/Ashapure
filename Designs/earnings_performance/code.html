@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-high": "#e6e8ea",
+                "on-primary-fixed": "#002109",
+                "surface-variant": "#e0e3e5",
+                "outline": "#6e7b6c",
+                "on-tertiary-container": "#fffbff",
+                "surface-dim": "#d8dadc",
+                "primary": "#006b2c",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#c74668",
+                "on-tertiary-fixed": "#3f0016",
+                "primary-container": "#00873a",
+                "inverse-surface": "#2d3133",
+                "on-surface": "#191c1e",
+                "surface-container-low": "#f2f4f6",
+                "secondary": "#565e74",
+                "tertiary": "#a72d51",
+                "primary-fixed-dim": "#62df7d",
+                "outline-variant": "#bdcaba",
+                "secondary-container": "#dae2fd",
+                "tertiary-fixed-dim": "#ffb2bf",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed-variant": "#3f465c",
+                "on-primary-container": "#f7fff2",
+                "on-secondary-fixed": "#131b2e",
+                "primary-fixed": "#7ffc97",
+                "on-tertiary-fixed-variant": "#8a143c",
+                "surface-container": "#eceef0",
+                "on-primary-fixed-variant": "#005320",
+                "surface-bright": "#f7f9fb",
+                "secondary-fixed": "#dae2fd",
+                "surface-tint": "#006e2d",
+                "on-secondary-container": "#5c647a",
+                "background": "#f7f9fb",
+                "surface": "#f7f9fb",
+                "secondary-fixed-dim": "#bec6e0",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-background": "#191c1e",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#3e4a3d",
+                "inverse-on-surface": "#eff1f3",
+                "inverse-primary": "#62df7d",
+                "error": "#ba1a1a",
+                "tertiary-fixed": "#ffd9de",
+                "surface-container-highest": "#e0e3e5"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-[#f7f9fb]/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="text-xl font-black text-[#16a34a] tracking-[-0.02em] font-['Inter']">Pristine Logistics</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded-full">
+<span class="w-2 h-2 rounded-full bg-[#16a34a]"></span>
+<span class="text-xs font-bold text-[#16a34a]">Online</span>
+</div>
+<button class="p-2 rounded-full hover:bg-[#e6e8ea] dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">account_balance_wallet</span>
+</button>
+<img alt="Driver profile avatar" class="w-8 h-8 rounded-full border border-outline-variant/15" data-alt="portrait of a confident smiling delivery partner in a clean green uniform with natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArWP-PLG93KRrsuBzFxkHyetMtpUblfi4tPEuBdAITliZNqhvBMcThYkpk3pmle0ykkoAwNEkqnQXN_tdnAZvRcm4JaoY3dkc7AIf8MN69_LMj2ygYlT-kImu6ivTJCPBCOiIYZPE1cuvbfPZW78oEZYfdrGSEXElVc8aqxuCnB6IeKxxea3bk_IOyjk8RzvMZ7lcoMOSVIKHZoPWaAUMLcBel0ymq2ssapL__C6Cb3Zfc-EcEILa6eZSF2JfMSwiexAC_NcpMQV0"/>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full hidden md:flex flex-col w-64 p-4 space-y-2 bg-[#f7f9fb] dark:bg-slate-950 pt-20">
+<div class="px-4 py-2 mb-6">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white font-['Inter'] tracking-[-0.01em]">Partner Portal</h2>
+<p class="text-[10px] uppercase tracking-[0.05em] text-[#16a34a] font-bold">Verified Status</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e6e8ea] dark:hover:bg-slate-800 rounded-xl transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-semibold">Map Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e6e8ea] dark:hover:bg-slate-800 rounded-xl transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="font-semibold">Order Queue</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-[#16a34a] shadow-sm rounded-xl transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-semibold">Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e6e8ea] dark:hover:bg-slate-800 rounded-xl transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-semibold">Performance</span>
+</a>
+</nav>
+<div class="pt-4 border-t border-outline-variant/15 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e6e8ea] dark:hover:bg-slate-800 rounded-xl transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-semibold text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#e6e8ea] dark:hover:bg-slate-800 rounded-xl transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-semibold text-sm">Support</span>
+</a>
+<button class="w-full mt-4 bg-surface-container-low text-on-surface py-3 rounded-xl font-bold active:opacity-80 transition-all">
+                Go Offline
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-64 pt-24 pb-12 px-6">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<header class="mb-10">
+<h1 class="text-4xl font-extrabold tracking-[-0.02em] text-on-surface">Weekly Overview</h1>
+<p class="text-secondary mt-1">Great work this week! You've earned 12% more than last week.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Earnings Card (Hero) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-[2rem] p-8 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-[0.1em] text-secondary mb-1">CURRENT WEEK</p>
+<h2 class="text-5xl font-black text-primary tracking-tight">$1,248.50</h2>
+</div>
+<div class="bg-primary-container text-on-primary-container px-4 py-2 rounded-xl text-sm font-bold">
+                            +12.4%
+                        </div>
+</div>
+<!-- Simplified Graph Placeholder -->
+<div class="mt-12 h-48 flex items-end justify-between gap-2">
+<div class="flex-1 bg-surface-container-high rounded-t-xl" style="height: 40%"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-xl" style="height: 65%"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-xl" style="height: 55%"></div>
+<div class="flex-1 bg-primary-container rounded-t-xl" style="height: 90%"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-xl" style="height: 70%"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-xl" style="height: 45%"></div>
+<div class="flex-1 bg-surface-container-high/50 rounded-t-xl border-2 border-dashed border-outline-variant" style="height: 30%"></div>
+</div>
+<div class="mt-4 flex justify-between text-[10px] font-bold text-secondary uppercase tracking-widest px-2">
+<span>Mon</span><span>Tue</span><span>Wed</span><span class="text-primary">Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+<!-- Daily Snapshot -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-[2rem] p-8 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-bold mb-6">Today's Activity</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-secondary text-sm">Deliveries</span>
+<span class="font-bold">14</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-secondary text-sm">Hours Online</span>
+<span class="font-bold">6h 12m</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-secondary text-sm">Tips</span>
+<span class="text-primary font-bold">+$42.00</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-4 bg-primary text-on-primary rounded-xl font-bold text-sm tracking-wide transition-all active:scale-95">
+                        Withdraw Earnings
+                    </button>
+</div>
+<!-- Performance Metrics -->
+<div class="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] flex items-center gap-6 shadow-sm group">
+<div class="w-16 h-16 rounded-2xl bg-[#f7fff2] flex items-center justify-center text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest">ON-TIME RATE</p>
+<h4 class="text-3xl font-black text-on-surface">98%</h4>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] flex items-center gap-6 shadow-sm group">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container/30 flex items-center justify-center text-secondary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest">AVG DELIVERY</p>
+<h4 class="text-3xl font-black text-on-surface">22m</h4>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] flex items-center gap-6 shadow-sm group">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed/30 flex items-center justify-center text-tertiary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest">SATISFACTION</p>
+<h4 class="text-3xl font-black text-on-surface">4.9/5</h4>
+</div>
+</div>
+</div>
+<!-- Incentives & Active Promos -->
+<div class="lg:col-span-12">
+<h3 class="text-2xl font-bold mb-6">Active Incentives</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-gradient-to-r from-primary to-primary-container p-6 rounded-[1.5rem] text-on-primary flex justify-between items-center">
+<div>
+<h4 class="text-lg font-bold">Morning Rush Bonus</h4>
+<p class="text-on-primary/80 text-sm">+$5.00 for every delivery before 9 AM</p>
+<div class="mt-4 inline-flex items-center px-3 py-1 bg-white/20 rounded-full text-xs font-bold">
+                                    Ends in 2h 15m
+                                </div>
+</div>
+<span class="material-symbols-outlined text-5xl opacity-20">wb_sunny</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] border-2 border-dashed border-outline-variant flex justify-between items-center">
+<div>
+<h4 class="text-lg font-bold">Weekend Warrior</h4>
+<p class="text-secondary text-sm">Complete 25 deliveries this weekend</p>
+<div class="mt-4 w-48 h-2 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 60%"></div>
+</div>
+<p class="mt-2 text-[10px] font-bold text-primary">15 / 25 COMPLETED</p>
+</div>
+<span class="material-symbols-outlined text-5xl text-outline-variant">military_tech</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#f7f9fb]/80 backdrop-blur-xl flex items-center justify-around z-50">
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-bold">Map</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-bold">Orders</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#16a34a]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-[10px] font-bold">Earnings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-bold">Stats</span>
+</button>
+</nav>
+</body></html>

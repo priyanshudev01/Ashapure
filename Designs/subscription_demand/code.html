@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Subscription Demand Forecast | Aasapure Merchant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline-variant": "#bdcaba",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#f7fff2",
+                    "on-secondary-container": "#5c647a",
+                    "surface-dim": "#d8dadc",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed": "#002109",
+                    "secondary-fixed": "#dae2fd",
+                    "outline": "#6e7b6c",
+                    "background": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#a72d51",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary": "#565e74",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-variant": "#e0e3e5",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb2bf",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#006e2d",
+                    "primary-fixed-dim": "#62df7d",
+                    "on-tertiary-fixed-variant": "#8a143c",
+                    "tertiary-fixed": "#ffd9de",
+                    "surface-container": "#eceef0",
+                    "on-secondary-fixed": "#131b2e",
+                    "tertiary-container": "#c74668",
+                    "on-background": "#191c1e",
+                    "secondary-container": "#dae2fd",
+                    "on-surface-variant": "#3e4a3d",
+                    "surface": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "primary-container": "#00873a",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "inverse-primary": "#62df7d",
+                    "surface-bright": "#f7f9fb",
+                    "on-tertiary-fixed": "#3f0016",
+                    "primary": "#006b2c",
+                    "on-primary-fixed-variant": "#005320",
+                    "primary-fixed": "#7ffc97",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift { transition: background-color 0.3s ease; }
+        .glass-nav { backdrop-filter: blur(12px); }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col h-screen fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 font-['Inter'] antialiased tracking-tight docked left-0 h-full w-64 border-r border-slate-200 dark:border-slate-800 z-50">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="agriculture">agriculture</span>
+</div>
+<div>
+<h1 class="text-2xl font-black text-green-700 dark:text-green-400 tracking-tighter">Aasapure Merchant</h1>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-widest">Dairy Logistics Hub</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="inventory_2">inventory_2</span>
+<span class="text-sm font-medium">Inventory</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_cart">shopping_cart</span>
+<span class="text-sm font-medium">Orders</span>
+</a>
+<a class="flex items-center gap-3 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 font-semibold rounded-lg px-4 py-2 border-r-4 border-green-600" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_month">calendar_month</span>
+<span class="text-sm">Subscription Demand</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="monitoring">monitoring</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="verified">verified</span>
+<span class="text-sm font-medium">Quality Management</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 mb-6 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Shipment
+            </button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 text-slate-500 hover:text-green-600 px-4 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-green-600 px-4 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Shell -->
+<header class="flex justify-between items-center px-6 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md h-16 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search areas or orders..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-200">
+<img alt="Merchant Farm Logo" class="w-8 h-8 rounded-full bg-slate-200" data-alt="Close-up portrait of a professional dairy farm manager in a clean green uniform against a blurred farm background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjLSYUglAHmMBf3iypMI1PceJ5Yh-bXMeRY6ZFpXp_pL8ZWvkbwkusozFrlVhQ9J000kUS9NiIK9-Qmxmyg77NFsqfn2ALLPRXiJJE_uVpxXEG4To_uK0I7jGFsRUuJ3dnFSR2I0_vVWM8sLeNkLKbsUtV_aMxNqQW2JbaI5c4t58GJvx-TNSqbKvs9u3a8wWlfwMHn3f-BW2Uh8SCZTqqH4cxyTSp8U319ppQLiEfpwdVYZ90vu8WPzvpDjjk17Z2s85kMHiZse4"/>
+<span class="material-symbols-outlined text-slate-500" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="ml-64 p-8 min-h-screen">
+<header class="mb-10">
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Demand Intelligence</span>
+<div class="h-px flex-1 bg-surface-container-high"></div>
+</div>
+<h2 class="text-4xl font-black text-on-surface -tracking-[0.02em]">Subscription Demand Forecast</h2>
+<p class="text-slate-500 mt-2 max-w-2xl">Precision insights derived from active subscription cycles to optimize your milking schedules and logistical deployment.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Hero Prediction Card (Tomorrow's Target) -->
+<div class="col-span-12 lg:col-span-5 bg-primary rounded-[2rem] p-8 text-on-primary relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-8">
+<span class="bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">Production Pulse</span>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-white animate-pulse"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+</div>
+</div>
+<p class="text-white/80 text-lg font-medium">Tomorrow's Production Needs</p>
+<h3 class="text-6xl font-black mt-2 leading-tight">Target:<br/>450L Cow Milk</h3>
+</div>
+<div class="relative z-10 mt-12 bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<p class="text-sm text-white/70">Daily Variance</p>
+<p class="text-xl font-bold">+12% vs last Wednesday</p>
+</div>
+</div>
+</div>
+<!-- Abstract Decorative Circle -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container rounded-full opacity-20 blur-3xl"></div>
+</div>
+<!-- Demand Trends Chart Area -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container-lowest rounded-[2rem] p-8 flex flex-col">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h4 class="text-xl font-bold">Weekly Demand Cycle</h4>
+<p class="text-sm text-slate-400">Projected volume based on recurring orders</p>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-xl">
+<button class="px-4 py-1.5 rounded-lg bg-white text-xs font-bold shadow-sm">Daily</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-bold text-slate-500">Weekly</button>
+</div>
+</div>
+<div class="flex-1 flex items-end justify-between gap-4 pt-4 h-64">
+<!-- Custom Chart Implementation -->
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary/10 rounded-t-xl relative h-32 hover:bg-primary/20 transition-all cursor-pointer group">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-24 rounded-t-xl group-hover:h-28 transition-all"></div>
+</div>
+<span class="text-xs font-bold text-slate-400">MON</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary/10 rounded-t-xl relative h-40 hover:bg-primary/20 transition-all cursor-pointer group">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-32 rounded-t-xl group-hover:h-36 transition-all"></div>
+</div>
+<span class="text-xs font-bold text-slate-400">TUE</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary/10 rounded-t-xl relative h-64 hover:bg-primary/20 transition-all cursor-pointer group">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-56 rounded-t-xl group-hover:h-60 transition-all border-x-4 border-primary-fixed-dim"></div>
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded shadow-xl">Tomorrow</div>
+</div>
+<span class="text-xs font-bold text-primary">WED</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary/10 rounded-t-xl relative h-48 hover:bg-primary/20 transition-all cursor-pointer group">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-36 rounded-t-xl group-hover:h-40 transition-all"></div>
+</div>
+<span class="text-xs font-bold text-slate-400">THU</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary/10 rounded-t-xl relative h-56 hover:bg-primary/20 transition-all cursor-pointer group">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-48 rounded-t-xl group-hover:h-52 transition-all"></div>
+</div>
+<span class="text-xs font-bold text-slate-400">FRI</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-3">
+<div class="w-full bg-primary/10 rounded-t-xl relative h-32 hover:bg-primary/20 transition-all cursor-pointer group">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-20 rounded-t-xl group-hover:h-24 transition-all"></div>
+</div>
+<span class="text-xs font-bold text-slate-400">SAT</span>
+</div>
+</div>
+</div>
+<!-- Distribution Hubs Bento Section -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low rounded-[2rem] p-8">
+<div class="flex items-center justify-between mb-8">
+<h4 class="text-2xl font-black -tracking-tight">Top Subscription Areas</h4>
+<button class="text-primary font-bold text-sm flex items-center gap-1">
+                        View Map
+                        <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-between h-48">
+<div>
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Priority Area</span>
+<h5 class="text-xl font-bold mt-1">Green Valley Estate</h5>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-xs text-slate-400">Active Households</p>
+<p class="text-2xl font-black">124</p>
+</div>
+<div class="w-10 h-10 rounded-full border-4 border-primary border-t-transparent animate-spin-slow"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-between h-48">
+<div>
+<span class="text-[10px] font-black uppercase tracking-widest text-slate-400">High Density</span>
+<h5 class="text-xl font-bold mt-1">Oakwood Heights</h5>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-xs text-slate-400">Active Households</p>
+<p class="text-2xl font-black">98</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="stat_1">stat_1</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-between h-48">
+<div>
+<span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Growth Zone</span>
+<h5 class="text-xl font-bold mt-1">Riverside Towers</h5>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-xs text-slate-400">Active Households</p>
+<p class="text-2xl font-black">76</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="add_circle">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Logistics Snapshot -->
+<div class="col-span-12 lg:col-span-4 bg-white rounded-[2rem] p-8 border border-slate-100 flex flex-col gap-6">
+<h4 class="text-lg font-bold">Logistics Readiness</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-2 h-12 bg-primary rounded-full"></div>
+<div class="flex-1">
+<p class="text-sm font-bold">Route A - Valley</p>
+<div class="w-full h-1.5 bg-slate-100 rounded-full mt-2">
+<div class="w-4/5 h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<span class="text-xs font-black">80%</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-12 bg-primary/40 rounded-full"></div>
+<div class="flex-1">
+<p class="text-sm font-bold">Route B - Heights</p>
+<div class="w-full h-1.5 bg-slate-100 rounded-full mt-2">
+<div class="w-2/3 h-full bg-primary/40 rounded-full"></div>
+</div>
+</div>
+<span class="text-xs font-black">65%</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-12 bg-tertiary/40 rounded-full"></div>
+<div class="flex-1">
+<p class="text-sm font-bold">Route C - Towers</p>
+<div class="w-full h-1.5 bg-slate-100 rounded-full mt-2">
+<div class="w-1/2 h-full bg-tertiary/40 rounded-full"></div>
+</div>
+</div>
+<span class="text-xs font-black text-tertiary">48%</span>
+</div>
+</div>
+<div class="mt-auto p-4 bg-primary-container/20 rounded-2xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+<p class="text-xs font-medium text-on-primary-fixed-variant leading-relaxed">
+                        Tip: 12 new subscriptions in <strong>Riverside</strong> start tomorrow. Deploy extra van?
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB for quick actions -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="local_shipping">local_shipping</span>
+</button>
+</body></html>

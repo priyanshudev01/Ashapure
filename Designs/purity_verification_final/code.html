@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Purity Verification - Pristine Logistics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#002109",
+                    "surface-variant": "#e0e3e5",
+                    "outline": "#6e7b6c",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-dim": "#d8dadc",
+                    "primary": "#16a34a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#c74668",
+                    "on-tertiary-fixed": "#3f0016",
+                    "primary-container": "#15803d",
+                    "inverse-surface": "#2d3133",
+                    "on-surface": "#191c1e",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary": "#565e74",
+                    "tertiary": "#a72d51",
+                    "primary-fixed-dim": "#62df7d",
+                    "outline-variant": "#bdcaba",
+                    "secondary-container": "#dae2fd",
+                    "tertiary-fixed-dim": "#ffb2bf",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-primary-container": "#f7fff2",
+                    "on-secondary-fixed": "#131b2e",
+                    "primary-fixed": "#dcfce7",
+                    "on-tertiary-fixed-variant": "#8a143c",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed-variant": "#14532d",
+                    "surface-bright": "#f7f9fb",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-tint": "#16a34a",
+                    "on-secondary-container": "#5c647a",
+                    "background": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#3e4a3d",
+                    "inverse-on-surface": "#eff1f3",
+                    "inverse-primary": "#62df7d",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffd9de",
+                    "surface-container-highest": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .scanner-beam {
+            background: linear-gradient(to bottom, transparent, #16a34a, transparent);
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            animation: scan 3s ease-in-out infinite;
+        }
+        @keyframes scan {
+            0%, 100% { top: 0; opacity: 0; }
+            50% { top: 100%; opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f7f9fb]/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="text-xl font-black text-primary tracking-tight">Pristine Logistics</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold text-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Online
+        </button>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500" data-icon="account_balance_wallet">account_balance_wallet</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+<img alt="Driver profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADV8IRH8oQUrPTBuelXc-yeQ0Nnr0c-ZiMq8_XfI17PPFIMYC2XN0AsILi9Jz6k5kkxf450OfkzVx0ThSj8jy1P4QH4sDgWa3p2Jn1agta5O8tV2OJHj7Y4R-IiFZXJK_x6BIOSwZCr_thXddctBBF_sAnuwhaPJuQogKx6FeG1tZN6GXnT52wq6J_3MzB9S7Fggr_3QbPBKdjcvRJMKF29hNVa9r-Q6D0hjt3TX0Rrt9gOuiK9BJAv5-iGMZmU0oJ1GOAPJTF8kw"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
+<!-- Left Column: Verification Action -->
+<section class="flex-1 space-y-10">
+<div class="space-y-3">
+<span class="text-primary font-extrabold tracking-widest text-xs uppercase bg-primary-fixed px-3 py-1 rounded-full">QUALITY ASSURANCE</span>
+<h1 class="text-5xl font-black text-on-surface tracking-tight leading-[1.1]">
+                Purity Verification
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+                Validate molecular integrity using our proprietary laser-spectroscopy scanner. Instant digital verification for every bottle.
+            </p>
+</div>
+<!-- Main Scanner Card -->
+<div class="relative">
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-10 shadow-xl border border-surface-container overflow-hidden">
+<div class="flex flex-col items-center text-center space-y-10">
+<!-- Scanner Visualization -->
+<div class="w-72 h-72 rounded-[2rem] bg-surface-container-low flex items-center justify-center relative border-2 border-surface-container overflow-hidden group">
+<img alt="Scanning Interface" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIcwyK66uYFucXv8Hpmbfo7WP2KOGUN1V8TAnHWV2AQEDHwCU0uTfmdtPRPQ-bJZG_QQzsKoswSMM0Nc3OJkD-jvFT1ESOLzxJtr1RyXnz-pPJBJ7Zagge_h-elXKXcHLCS2nFhG1eGmF51AB2gb3DenhXke5OJcErc8LnLVNov-k33SbcqCfs98olpEfKWQmu7N6jbpp3Zqt9hvnly4j7pWtPdaU0QiWD9d9hi-6_p2QKzXwxfVouEU4R5rkwoBgnuuIFOJsTlOU"/>
+<div class="scanner-beam"></div>
+<div class="relative flex flex-col items-center gap-4">
+<div class="p-6 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-6xl" data-icon="qr_code_scanner">qr_code_scanner</span>
+</div>
+<span class="text-xs font-black text-primary tracking-[0.2em] uppercase">Awaiting Sample</span>
+</div>
+</div>
+<div class="space-y-6 w-full max-w-md">
+<button class="group w-full bg-primary hover:bg-primary-container text-white py-6 rounded-2xl font-black text-xl transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-4 transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-3xl group-hover:animate-pulse" data-icon="sensors">sensors</span>
+                            Scan &amp; Verify Milk
+                        </button>
+<p class="text-sm text-on-surface-variant font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="info">info</span>
+                            Hold the bottle 5cm from the camera sensor
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Info Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div class="p-6 bg-surface-container-low rounded-2xl border border-surface-container/50 space-y-4">
+<div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="science">science</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Batch #MB-99210</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Sourced from Green Meadows Farm, processed 4h ago.</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low rounded-2xl border border-surface-container/50 space-y-4">
+<div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="thermometer">thermometer</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Transit Temp: 3.4°C</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Optimal range (2°C - 4°C) maintained consistently.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Verification Results -->
+<aside class="w-full lg:w-[440px] space-y-8">
+<!-- Success State Card -->
+<div class="bg-surface-container-lowest border border-primary/20 rounded-[2.5rem] p-8 shadow-2xl shadow-primary/5 flex flex-col h-full">
+<div class="flex items-center gap-5 mb-10">
+<div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-white text-4xl font-bold" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h2 class="text-3xl font-black text-primary tracking-tight">VERIFIED</h2>
+<p class="text-on-surface-variant text-sm font-bold uppercase tracking-wider">Quality Guarantee Met</p>
+</div>
+</div>
+<div class="space-y-8 flex-1">
+<!-- Quality Metrics -->
+<div class="p-6 bg-surface-container-low rounded-3xl border border-surface-container">
+<div class="flex items-end justify-between mb-4">
+<div>
+<span class="text-[10px] font-black text-on-surface-variant tracking-[0.2em] uppercase">PH LEVEL</span>
+<div class="text-4xl font-black text-on-surface mt-1 tracking-tighter">6.7</div>
+</div>
+<span class="mb-2 text-primary font-black text-xs bg-primary-fixed px-3 py-1.5 rounded-lg border border-primary/10">OPTIMAL</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-black text-on-surface-variant tracking-[0.2em] uppercase">PURITY SCORE</span>
+<span class="text-lg font-black text-primary">99.8%</span>
+</div>
+<div class="h-4 w-full bg-surface-container-low rounded-full overflow-hidden p-1 border border-surface-container">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[99.8%] rounded-full shadow-inner"></div>
+</div>
+</div>
+<div class="py-6 border-y border-surface-container space-y-5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary font-bold" data-icon="verified_user">verified_user</span>
+<span class="text-sm font-bold text-on-surface">No Adulterants Detected</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary font-bold" data-icon="water_drop">water_drop</span>
+<span class="text-sm font-bold text-on-surface">Fat Content: 4.2% (Full Cream)</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full bg-secondary-container text-on-secondary-fixed py-5 rounded-2xl font-black text-base hover:brightness-95 transition-all shadow-sm flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="card_membership">card_membership</span>
+                        Generate Digital Certificate
+                    </button>
+<p class="text-[10px] text-center mt-4 text-on-surface-variant font-bold uppercase tracking-widest">Signed &amp; Encrypted by Pristine Bio-Labs</p>
+</div>
+</div>
+</div>
+<!-- Location Context -->
+<div class="bg-surface-container-low rounded-[2.5rem] overflow-hidden p-1.5 border border-surface-container shadow-sm">
+<div class="h-40 w-full bg-surface-variant rounded-[2rem] relative overflow-hidden">
+<img alt="Verification Map" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlG1OQGAtpDq9O7wjLzKKlUW-izHIR46ERbDFRBj5UOlBfEL2Bu_Nzlb16wNAOR6kgrxx-rKqvkwmjbUigaA0IaWckZsxgj9AmKs7dK87RAtp2Bq9W77dEzJxwMZRuTiI7511h4EhworHjAfbztKgv8CLSnMtPOoXlj9HaJEYAHBoB5SlSxegUScu2dO0AJrxzo3ME9NxTWMra-m8uvHrtOp9vvanMtbyaQqNz2BYPpHaMNdxga9twImO4paZikDfkXHmO4BAmnDw"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full shadow-lg flex items-center gap-3 border border-white">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-[10px] font-black uppercase tracking-widest text-on-surface">Verified: Sector 14, Mumbai</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<nav class="hidden lg:flex fixed left-0 top-0 h-full w-24 flex-col items-center py-10 space-y-8 bg-[#f7f9fb] border-r border-surface-container z-40 pt-28">
+<a class="w-14 h-14 flex items-center justify-center rounded-2xl bg-white text-primary shadow-lg shadow-primary/10 border border-primary/10" href="#">
+<span class="material-symbols-outlined font-bold" data-icon="qr_code_scanner" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</a>
+<a class="w-14 h-14 flex items-center justify-center rounded-2xl text-slate-400 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+</a>
+<a class="w-14 h-14 flex items-center justify-center rounded-2xl text-slate-400 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</a>
+<a class="w-14 h-14 flex items-center justify-center rounded-2xl text-slate-400 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</a>
+<div class="mt-auto flex flex-col gap-8 items-center pb-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="settings">settings</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="support_agent">support_agent</span></a>
+</div>
+</nav>
+<nav class="lg:hidden fixed bottom-0 w-full glass-header flex justify-around items-center py-5 px-6 z-50 border-t border-surface-container shadow-2xl">
+<div class="flex flex-col items-center text-primary font-black">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<span class="text-[9px] uppercase mt-1 tracking-widest">Scan</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[9px] uppercase mt-1 tracking-widest">History</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="text-[9px] uppercase mt-1 tracking-widest">Fleet</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[9px] uppercase mt-1 tracking-widest">Me</span>
+</div>
+</nav>
+</body></html>

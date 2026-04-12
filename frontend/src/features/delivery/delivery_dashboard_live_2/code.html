@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-fixed": "#002109",
+                        "surface-variant": "#e0e3e5",
+                        "outline": "#6e7b6c",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#16a34a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#c74668",
+                        "on-tertiary-fixed": "#3f0016",
+                        "primary-container": "#16a34a",
+                        "inverse-surface": "#2d3133",
+                        "on-surface": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary": "#565e74",
+                        "tertiary": "#a72d51",
+                        "primary-fixed-dim": "#62df7d",
+                        "outline-variant": "#bdcaba",
+                        "secondary-container": "#dae2fd",
+                        "tertiary-fixed-dim": "#ffb2bf",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#131b2e",
+                        "primary-fixed": "#7ffc97",
+                        "on-tertiary-fixed-variant": "#8a143c",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed-variant": "#005320",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-tint": "#16a34a",
+                        "on-secondary-container": "#5c647a",
+                        "background": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#3e4a3d",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-primary": "#62df7d",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-container-highest": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .map-gradient-overlay {
+            background: linear-gradient(180deg, rgba(247, 249, 251, 0.4) 0%, rgba(247, 249, 251, 0) 15%, rgba(247, 249, 251, 0) 85%, rgba(247, 249, 251, 0.7) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white/90 backdrop-blur-xl border-b border-outline-variant/10">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-primary tracking-tighter">Pristine Logistics</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex flex-col items-end">
+<span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Earnings</span>
+<span class="text-lg font-black text-on-surface">₹1,420.50</span>
+</div>
+<!-- Status Toggle -->
+<div class="flex items-center gap-3 bg-primary/10 px-4 py-2 rounded-full border-2 border-primary/20">
+<span class="text-sm font-black text-primary uppercase tracking-tight">Online</span>
+<button class="w-12 h-6 bg-primary rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full ml-auto shadow-sm"></div>
+</button>
+</div>
+<img alt="Driver profile" class="w-10 h-10 rounded-full border-2 border-white shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcR8Kngr2soUQHTJAokysCMrczVOMX75M9pDwJbJXIlblYksjD_nCZX9GPBnvGXNBM4_ynYKOK0hXwEb1igrypZy5X9f63n7tQfCKmYuMIjasfjR0k5ph4rZAOOqVS9gYhw6TzNGGAoovvL-iMF4Y7deh3YguAxFaLP0-q4DplQ4lXpthAXk076uDkdNGe98y2-ObbFnxdOneDZPYwwtt5ABigrV7BRVjgF4xBlDCUxj6Txzai3w1mea1Uxl1Y73l3Ly4YtRTXP9s"/>
+</div>
+</header>
+<!-- Desktop Sidebar -->
+<nav class="fixed left-0 top-0 h-full flex flex-col p-4 space-y-2 bg-white w-64 z-40 pt-24 hidden md:flex border-r border-outline-variant/10">
+<div class="flex-1 space-y-1">
+<a class="flex items-center gap-4 p-4 bg-primary text-white shadow-lg rounded-2xl font-bold transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span>Live Delivery</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-slate-500 hover:bg-surface-container-low rounded-2xl transition-all font-semibold" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>Task History</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-slate-500 hover:bg-surface-container-low rounded-2xl transition-all font-semibold" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span>Wallet</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-slate-500 hover:bg-surface-container-low rounded-2xl transition-all font-semibold" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span>Stats</span>
+</a>
+</div>
+<div class="pt-4 space-y-1">
+<a class="flex items-center gap-4 p-4 text-slate-500 hover:bg-surface-container-low rounded-2xl font-semibold transition-all" href="#">
+<span class="material-symbols-outlined text-error">report</span>
+<span class="text-error">Report Emergency</span>
+</a>
+<button class="w-full mt-4 bg-surface-container-highest text-on-surface py-4 rounded-2xl font-black text-sm uppercase tracking-widest active:scale-95 transition-transform">
+            Go Offline
+        </button>
+</div>
+</nav>
+<!-- Main Delivery Map Focus -->
+<main class="md:ml-64 h-screen relative bg-surface-container-low">
+<!-- Map Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Interactive Delivery Map" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcihhlmU2OCfhUIq-MTgn7G14qq334bZWr39YGxyArar6xvvTMLxdaUXnAF8MAEIXfO5c0tRdki8bUR0Vizsl007nHIuVZTGtRwa7QoQ3FEtu2Jy-5mjUzHa1sFhRByBzcer3nuGK0sLSiCAQm6g241C37gRupCVyEaHGdIxd1l4XdNi3aSJwxch8a4pP6oQYSX_jK62O5vEi8u3BXlicvLrZo6JQa5FG1DybIJLvAB2qOwFDVBWPsGUN4_dNqLFg0LMgw-y6dBSs"/>
+<div class="absolute inset-0 map-gradient-overlay pointer-events-none"></div>
+<!-- Live Markers -->
+<div class="absolute top-[45%] left-[48%]">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/30 rounded-full animate-ping"></div>
+<div class="relative bg-primary text-white p-3 rounded-full shadow-2xl border-4 border-white">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+</div>
+</div>
+<div class="absolute top-[35%] left-[58%]">
+<div class="bg-white text-primary p-3 rounded-full shadow-2xl border-2 border-primary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+</div>
+</div>
+<!-- Floating UI Layers -->
+<div class="relative z-10 h-full p-4 md:p-8 flex flex-col pointer-events-none">
+<!-- Quick Communication (Floating Top Right) -->
+<div class="flex justify-end gap-3 pointer-events-auto mt-20">
+<button class="bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-outline-variant/10 flex flex-col items-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary font-bold">call</span>
+<span class="text-[10px] font-black uppercase text-slate-500">Call</span>
+</button>
+<button class="bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-outline-variant/10 flex flex-col items-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-error font-bold">warning</span>
+<span class="text-[10px] font-black uppercase text-error">Issue</span>
+</button>
+</div>
+<!-- Main Action Card -->
+<div class="mt-auto max-w-2xl mx-auto w-full pointer-events-auto">
+<div class="bg-white shadow-[0px_24px_48px_rgba(0,0,0,0.12)] rounded-[2.5rem] p-6 border border-outline-variant/5">
+<!-- Customer & Delivery Info -->
+<div class="flex items-center justify-between gap-4 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center p-2">
+<img alt="Product" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXu0gTHqulIkx2u0fgBjU4o8N2ivkGkpoFJNWnVqEOCwAVLqHpM0YFkbdxCpoL50MMfn9TAyTINo0XmiQrYYFGVSCCnLlbqxzc4YMNcsoapaCJb4mOYdbZP9V7A_dIkkZ1T1fA8TJzxjgg6dO9hAchHpEJoDplLptzvIVPzEXdoHp0Z45HOrSXHaaaFoYlm2KMZzArFnV2-YhzLLw4KzhMK6rSQiimYKyw3rp0T7fFVmhlT9UqXZ8rgwcRP4_AxLgFfqZcgd3psxud4"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="text-lg font-black tracking-tight">Kiran Sharma</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-black px-2 py-0.5 rounded-full uppercase">Priority</span>
+</div>
+<p class="text-sm font-bold text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                Indiranagar, 12th Main
+                            </p>
+</div>
+</div>
+<div class="bg-primary text-white px-5 py-3 rounded-2xl text-center">
+<p class="text-[10px] font-black uppercase opacity-80 leading-none mb-1">ETA</p>
+<p class="text-xl font-black">8 MIN</p>
+</div>
+</div>
+<!-- Delivery Journey Timeline -->
+<div class="relative px-4 mb-10">
+<div class="absolute top-4 left-0 w-full h-1 bg-surface-container-high z-0 rounded-full">
+<div class="h-full bg-primary w-[75%] rounded-full shadow-[0_0_8px_rgba(22,163,74,0.4)]"></div>
+</div>
+<div class="relative z-10 flex justify-between">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shadow-lg"><span class="material-symbols-outlined text-xs font-bold">check</span></div>
+<span class="text-[10px] font-black uppercase text-slate-400">Pickup</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shadow-lg"><span class="material-symbols-outlined text-xs font-bold">check</span></div>
+<span class="text-[10px] font-black uppercase text-slate-400">Transit</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 -mt-1 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-2xl">
+<div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+</div>
+<span class="text-[10px] font-black uppercase text-primary">Purity</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-slate-300 flex items-center justify-center"><span class="material-symbols-outlined text-xs">flag</span></div>
+<span class="text-[10px] font-black uppercase text-slate-300">Delivered</span>
+</div>
+</div>
+</div>
+<!-- Critical Action Button -->
+<button class="w-full bg-primary text-white py-6 rounded-[1.5rem] font-black text-xl shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 active:scale-[0.98] transition-all">
+                    VERIFY MILK NOW
+                    <span class="material-symbols-outlined font-black">qr_code_scanner</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Navigation Shell -->
+<footer class="fixed bottom-0 w-full z-50 md:hidden bg-white/95 backdrop-blur-xl border-t border-outline-variant/10 px-8 py-4 flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-black" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="text-[10px] font-black uppercase">Live</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-black uppercase">Queue</span>
+</a>
+<div class="relative -top-8">
+<button class="bg-primary text-white p-5 rounded-full shadow-2xl border-8 border-surface active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl font-black">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[10px] font-black uppercase">Earnings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-black uppercase">Me</span>
+</a>
+</footer>
+</body></html>
