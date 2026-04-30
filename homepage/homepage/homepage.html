@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asha Pure</title>
+
+  <link rel="stylesheet" href="homepage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Asha Pure</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="homevideo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Suspended Glass Card -->
+    <div class="floating-glass-card" data-aos="fade-up">
+      <div class="card-content">
+        <span class="badge">Asha Pure</span>
+        <h1 class="title">Pure Milk, <br><span>Pure Trust</span></h1>
+        <p class="subtitle">Experience fast & easy online ordering on the Asha Dairy app.</p>
+
+        <div class="button-group">
+          <button class="btn btn-primary">Sign Up</button>
+          <a href="#about" class="btn btn-secondary"
+            style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Learn
+            More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <a href="#features"><i class="fas fa-chevron-down"></i></a>
+    </div>
+
+  </section>
+
+  <!-- INFO -->
+  <section class="info-section" id="features">
+    <h2 data-aos="fade-up">Why Choose Asha Dairy?</h2>
+
+    <div class="info-container">
+
+      <div class="info-box" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon">👥</div>
+        <h3>Attract Customers</h3>
+        <p>Reach more people and grow your daily milk orders.</p>
+      </div>
+
+      <div class="info-box" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon">🚚</div>
+        <h3>Doorstep Delivery</h3>
+        <p>Easy delivery at your home every morning.</p>
+      </div>
+
+      <div class="info-box" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon">📩</div>
+        <h3>Support</h3>
+        <p>Quick help for all your queries and issues.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about" data-aos="fade-up">
+    <h2>What is Asha Pure?</h2>
+    <p>
+      Asha Pure is a smart dairy management system that connects customers,
+      delivery partners, and admins into one seamless platform.
+      It ensures fresh milk delivery, easy order tracking, and smooth operations.
+    </p>
+  </section>
+
+  <!-- MODULES -->
+  <section class="modules-section">
+    <h2 data-aos="fade-up">Our Modules</h2>
+
+    <div class="modules-container">
+
+      <div class="module-card" data-aos="flip-left" data-aos-delay="100">User App</div>
+      <div class="module-card" data-aos="flip-left" data-aos-delay="200">Delivery Dashboard</div>
+      <div class="module-card" data-aos="flip-left" data-aos-delay="300">Admin Panel</div>
+      <div class="module-card" data-aos="flip-left" data-aos-delay="400">Order Management</div>
+
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <h2 data-aos="fade-up">Why Our System?</h2>
+
+    <div class="benefits-container">
+
+      <div class="benefit" data-aos="fade-right" data-aos-delay="100">✔ Fast Delivery</div>
+      <div class="benefit" data-aos="fade-right" data-aos-delay="200">✔ Easy Tracking</div>
+      <div class="benefit" data-aos="fade-right" data-aos-delay="300">✔ Secure Payments</div>
+      <div class="benefit" data-aos="fade-right" data-aos-delay="400">✔ Time Saving</div>
+
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section" id="team">
+    <h2 data-aos="fade-up">Meet Our Team</h2>
+
+    <div class="team-container">
+
+      <!-- MEMBER 1 -->
+      <div class="team-card" data-aos="zoom-in" onclick="this.classList.toggle('flip')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="imgs/team1.jpeg">
+          </div>
+          <div class="card-back">
+            <h3>Priyanshu Bisht</h3>
+            <p>Backend Developer/UI Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER 2 -->
+      <div class="team-card" data-aos="zoom-in" data-aos-delay="100" onclick="this.classList.toggle('flip')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="imgs/team2.jpeg">
+          </div>
+          <div class="card-back">
+            <h3>Akshita Singh</h3>
+            <p>Backend Developer/UI Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER 3 -->
+      <div class="team-card" data-aos="zoom-in" data-aos-delay="200" onclick="this.classList.toggle('flip')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="imgs/team3.jpeg">
+          </div>
+          <div class="card-back">
+            <h3>Mahesh Bhatt</h3>
+            <p>Frontend Developer/UI Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER 4 -->
+      <div class="team-card" data-aos="zoom-in" data-aos-delay="300" onclick="this.classList.toggle('flip')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="imgs/team4.jpeg">
+          </div>
+          <div class="card-back">
+            <h3>Arjun Nath Goswami</h3>
+            <p>Frontend Developer/UI Designer</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Asha Pure</h3>
+        <p>Delivering pure milk directly to your doorstep every morning.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#features">Features</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: info@ashapure.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Asha Pure. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
